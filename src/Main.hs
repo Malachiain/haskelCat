@@ -1,11 +1,13 @@
 import System.IO()
 import System.Environment (getArgs)
+import System.Directory (getCurrentDirectory)
+import System.FilePath (pathSeparator)
 
 main :: IO ()
 main = do
   args <- getArgs
-  let fileName = processArgs args
-  putStrLn fileName
+  currentDir <- getCurrentDirectory
+  let fileName = currentDir ++ [pathSeparator] ++ processArgs args
   contents <- readFile fileName
   putStr contents
 

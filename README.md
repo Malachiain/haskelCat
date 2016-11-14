@@ -7,4 +7,4 @@ At present the file name need to be reative to the binary
 
 $ stack setup
 $ stack build
-$stack exec haskelCat <yourFileName>
+$ ./haskelCat <yourFileName> //where haskelCat is your binary
